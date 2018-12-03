@@ -1,0 +1,98 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js install
+
+PATH: 
+  C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin;C:\Program Files\Git\cmd;C:\Users\RusmanWahab\AppData\Local\Microsoft\WindowsApps;C:\Users\RusmanWahab\AppData\Roaming\npm;C:\Users\RusmanWahab\AppData\Local\Yarn\bin
+
+Yarn version: 
+  1.3.2
+
+Node version: 
+  8.9.4
+
+Platform: 
+  win32 x64
+
+npm manifest: 
+  {
+  	"name": "ilm",
+  	"version": "0.0.1",
+  	"license": "MIT",
+  	"scripts": {
+  		"analyzer": "webpack-bundle-analyzer dist/stats.json",
+  		"build:prod": "ng build --prod -sw true -ec true -aot true --stats-json && npm run ngsw && ng build --prod --aot true --app server --output-hashing=none --stats-json",
+  		"build:prod:experimental": "ng build --prod -sw true -ec true -aot true --stats-json && npm run ngsw && ng build --prod --aot true --app server --output-hashing=none --bundle-dependencies all --stats-json",
+  		"build": "ng build && npm run generate-sw && ng build --app server --output-hashing=none --bundle-dependencies all",
+  		"ngsw": "ngsw-config dist/public ./src/ngsw-config.json",
+  		"postngsw": "cp node_modules/@angular/service-worker/ngsw-worker.js ./dist/public/ngsw-worker.js",
+  		"tsc": "cd server && tsc",
+  		"posttsc": "node dist/server.js",
+  		"server": "node dist/server.js"
+  	},
+  	"dependencies": {
+  		"@angular/animations": "^5.2.1",
+  		"@angular/cdk": "^5.1.0",
+  		"@angular/common": "^5.2.1",
+  		"@angular/compiler": "^5.2.1",
+  		"@angular/core": "^5.2.1",
+  		"@angular/flex-layout": "^2.0.0-beta.12",
+  		"@angular/forms": "^5.2.1",
+  		"@angular/http": "^5.2.1",
+  		"@angular/material": "^5.1.0",
+  		"@angular/platform-browser": "^5.2.1",
+  		"@angular/platform-browser-dynamic": "^5.2.1",
+  		"@angular/platform-server": "^5.2.1",
+  		"@angular/platform-webworker": "^5.2.1",
+  		"@angular/platform-webworker-dynamic": "^5.2.1",
+  		"@angular/router": "^5.2.1",
+  		"@angular/service-worker": "^5.2.1",
+  		"@nguniversal/common": "^5.0.0-beta.5",
+  		"@nguniversal/express-engine": "^5.0.0-beta.5",
+  		"@nguniversal/module-map-ngfactory-loader": "^5.0.0-beta.5",
+  		"angularfire2": "latest",
+  		"firebase": "latest",
+  		"animate.css": "latest",
+  		"classlist.js": "latest",
+  		"core-js": "latest",
+  		"express": "latest",
+  		"hammerjs": "latest",
+  		"html-pdf-2": "^1.4.1",
+  		"html2pdf": "0.0.11",
+  		"html2pdf-cli": "^1.0.1",
+  		"html2pdf-node": "^1.0.8",
+  		"html2pdf.it": "^1.7.0",
+  		"html2pdf.js": "^0.8.2",
+  		"idb-keyval": "latest",
+  		"intl": "latest",
+  		"moment": "latest",
+  		"multer": "latest",
+  		"path": "^0.12.7",
+  		"preboot": "latest",
+  		"reflect-metadata": "*",
+  		"rxjs": "latest",
+  		"uuid": "*",
+  		"web-animations-js": "latest",
+  		"workbox-build": "latest",
+  		"workbox-sw": "latest",
+  		"zone.js": "latest"
+  	},
+  	"devDependencies": {
+  		"@angular/cli": "1.6.5",
+  		"@angular/compiler-cli": "^5.2.1",
+  		"@angular/language-service": "^5.2.1",
+  		"typescript": "2.6.2",
+  		"webpack": "^3.10.0"
+  	}
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: connect ETIMEDOUT 104.16.62.173:443
+      at Object._errnoException (util.js:1022:11)
+      at _exceptionWithHostPort (util.js:1044:20)
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1182:14)

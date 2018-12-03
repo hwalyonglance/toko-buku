@@ -1,0 +1,74 @@
+{
+	"$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+	"project": {
+		"name": "ilm"
+	},
+	"apps": [
+		{
+			"root": "src",
+			"outDir": "dist/public",
+			"assets": [
+				"assets",
+				"favicon.ico"
+			],
+			"index": "index.html",
+			"main": "main.browser.ts",
+			"polyfills": "polyfills.ts",
+			"tsconfig": "tsconfig.app.json",
+			"prefix": "",
+			"styles": [
+				"styles.scss"
+			],
+			"scripts": [
+			],
+			"environmentSource": "environments/environment.ts",
+			"environments": {
+				"dev": "environments/environment.ts",
+				"prod": "environments/environment.prod.ts"
+			},
+			"serviceWorker": true
+		},
+		{
+			"name": "server",
+			"platform": "server",
+			"root": "src",
+			"outDir": "dist",
+			"main": "main.server.ts",
+			"tsconfig": "tsconfig.server.json",
+			"environmentSource": "environment/environment.ts",
+			"environments": {
+				"dev": "environment.environment.ts",
+				"prod": "environment.environment.prod.ts"
+			}
+		}
+	],
+	"defaults": {
+		"build": {
+			"deleteOutputPath": false
+		},
+		"class": {
+			"spec": false
+		},
+		"component": {
+			"inlineStyle": true,
+			"inlineTemplate": false,
+			"spec": false
+		},
+		"directive": {
+			"spec": false
+		},
+		"guard": {
+			"spec": false
+		},
+		"module": {
+			"spec": false
+		},
+		"pipe": {
+			"spec": false
+		},
+		"service": {
+			"spec": false
+		},
+		"styleExt": "scss"
+	}
+}

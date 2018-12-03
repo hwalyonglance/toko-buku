@@ -1,0 +1,36 @@
+[media query]
+xs = max-width: 599px
+sm = min-width: 600px and max-width: 959px
+md = min-width: 960px and max-width: 1279px
+lg = min-width: 1280px and max-width: 1919px
+
+fxFoo.gt-xs, fxFoo.xs
+
+fxFlex[.gt-xs | .gt-sm | .gt-md | .gt-lg] = [number | ('none' | 'nogrow' | 'grow' | 'initial' | 'auto' | 'noshrink')]
+\> param1 = # number% | auto
+
+fxHide[.gt-xs | .gt-sm | .gt-md | .gt-lg] = [condition]
+fxShow[.gt-xs | .gt-sm | .gt-md | .gt-lg] = [condition]
+
+fxLayoutWrap
+\> as fxFlex parent; if sum(fxFlex) > 100 then row('new') /* <br> */;
+
+fxFlexOffset = number%
+\> param1 = # push number % /* 15% */
+
+[fxLayout]
+fxLayout = ('row' | 'row-reverse' | 'column' | 'column-reverse') ('wrap' | 'nowrap' | 'wrap-reverse')
+\> as fxFlex parent;
+\> param1 = # flex-direction
+\> param2 = # flex-wrap
+
+fxFlexOrder[.gt-xs | .gt-sm | .gt-md | .gt-lg] = number
+
+fxLayoutAlign = [?'start' | 'none' | 'center' | 'end' | 'space-around' | 'space-between'] [?'stretch' | 'none' | 'start' | 'center'| 'end']
+
+fxLayoutAlign = (param1, param2) as ('auto' | 'start' | 'center' | 'baseline' | 'end' | 'stretch') /* # @dul.web.id */
+\> param1 = # align-items # @dul.web.id
+\> param2 = # align-content # @dul.web.id
+
+fxLayoutGap = param1 as cssLength /* px | % | vh | vw | em | rem */
+\> param1 = # margin
